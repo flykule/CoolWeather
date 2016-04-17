@@ -116,7 +116,7 @@ public class CoolWeatherDB {
     public void saveCountry(Country country) {
         if (country != null) {
             ContentValues values = new ContentValues();
-            values.put("country_name",country.getcountryName());
+            values.put("country_name",country.getCountryName());
             values.put("country_code",country.getCountryCode());
             values.put("city_id",country.getCityId());
             db.insert("Country", null, values);

@@ -17,7 +17,7 @@ public class Country {
         this.id = id;
     }
 
-    public String getcountryName() {
+    public String getCountryName() {
         return countryName;
     }
 

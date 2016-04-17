@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import udcastle.coolweather.R;
+import udcastle.coolweather.service.AutoUpdateService;
 import udcastle.coolweather.util.HttpCallbackListener;
 import udcastle.coolweather.util.HttpUtil;
 import udcastle.coolweather.util.Utility;
@@ -149,6 +150,8 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
         currentDateText.setText(prefs.getString("current_date", ""));
         weatherInfoLayout.setVisibility(View.VISIBLE);
         cityNameText.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent)
     }
 
     @Override
